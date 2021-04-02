@@ -1,0 +1,213 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Test-Developer_Sysone
+  description: API de automóviles
+
+basePath: /api
+
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+  
+definitions:
+  ErrorResponse:
+    type: object
+    required:
+      - error
+      - descripcion
+    properties:
+      error:
+        type: string
+        description: Codigo de error.
+      descripcion:
+        type: string
+        description: Descripción del error.
+  Automovil:
+    type: "object"
+    properties:
+      id:
+        description: Identificador de automovil
+        type: "integer"
+        format: "int64"
+      modelo:
+        description: Modelo del automovil
+        type: "string"
+      techoCorredizo:
+        description: Describe si el auto posee techo corredizo.
+        type: "boolean"
+      aireAcondicionado:
+        description: Describe si el auto posee aire acondicionado.
+        type: "boolean"
+      frenosAbs:
+        description: Describe si el auto posee frenos abs.
+        type: "boolean"
+      airbag:
+        description: Describe si el auto posee airbag.
+        type: "boolean"
+      llantasAlineacion:
+        description: Describe si el auto posee llantas de alineacion.
+        type: "boolean"
+      importe:
+        description: Valor total del auto.
+        type: "number"
+        format: "double"
+  AutomovilDTO:
+    type: "object"
+    properties:
+      modelo:
+        description: Modelo del automovil
+        type: "string"
+      techoCorredizo:
+        description: Describe si el auto posee techo corredizo [SI/NO].
+        type: "string"
+      aireAcondicionado:
+        description: Describe si el auto posee aire acondicionado [SI/NO].
+        type: "string"
+      frenosAbs:
+        description: Describe si el auto posee frenos abs [SI/NO].
+        type: "string"
+      airbag:
+        description: Describe si el auto posee airbag [SI/NO].
+        type: "string"
+      llantasAlineacion:
+        description: Describe si el auto posee llantas de alineacion [SI/NO].
+        type: "string"
+      importe:
+        description: Valor total del auto.
+        type: "number"
+        format: "double"
+  AutomovilPostDTO:
+    type: "object"
+    properties:
+      modelo:
+        description: Modelo del automovil
+        type: "string"
+      techoCorredizo:
+        description: Describe si el auto posee techo corredizo [SI/NO].
+        type: "string"
+      aireAcondicionado:
+        description: Describe si el auto posee aire acondicionado [SI/NO].
+        type: "string"
+      frenosAbs:
+        description: Describe si el auto posee frenos abs [SI/NO].
+        type: "string"
+      airbag:
+        description: Describe si el auto posee airbag [SI/NO].
+        type: "string"
+      llantasAlineacion:
+        description: Describe si el auto posee llantas de alineacion [SI/NO].
+        type: "string"
+  
+parameters:
+    id:
+      name: id
+      in: path
+      description: Identificador del automovil.
+      type: integer
+      required: true
+      
+paths:
+  /automovil:
+    get:
+      tags:
+        - Automovil
+      description: Listado de automóviles.
+      responses:
+        '200':
+          description: Consulta exitosa.
+          schema:
+            $ref: '#/definitions/AutomovilDTO'
+        '400':
+          $ref: '#/responses/400'
+        '500':
+          $ref: '#/responses/500'
+
+    post:
+      tags:
+        - Automovil
+      description: Alta de automóvil.
+      parameters:
+        - $ref: '#/definitions/AutomovilPostDTO'
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/AutomovilPostDTO'
+      responses:
+        '200':
+          description: Creación exitosa.
+        '400':
+          $ref: '#/responses/400'
+        '500':
+          $ref: '#/responses/500'
+
+  /automovil/{id}:
+    get:
+      tags:
+        - Automovil
+      description: Obtener automóvil por id.
+      parameters:
+        - $ref: '#/parameters/id'
+      responses:
+        '200':
+          description: Consulta exitosa.
+          schema:
+            $ref: '#/definitions/AutomovilDTO'
+        '400':
+          $ref: '#/responses/400'
+        '500':
+          $ref: '#/responses/500'
+    put:
+      tags:
+        - Automovil
+      description: Modificación de automóvil.
+      parameters:
+        - $ref: '#/parameters/id'
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/AutomovilPostDTO'
+      responses:
+        '200':
+          description: Modificación exitosa.
+        '400':
+          $ref: '#/responses/400'
+        '500':
+          $ref: '#/responses/500'
+    
+    delete:
+      tags:
+        - Automovil
+      description: Eliminación de automóvil.
+      parameters:
+        - $ref: '#/parameters/id'
+      responses:
+        '200':
+          description: Eliminación exitosa.
+        '400':
+          $ref: '#/responses/400'
+        '500':
+          $ref: '#/responses/500'
+
+responses:
+  400:
+    headers:
+      X-Timestamp:
+        type: string
+        description: >-
+    description: Error genérico.
+    schema:
+      $ref: '#/definitions/ErrorResponse'
+  500:
+    headers:
+      X-Timestamp:
+        type: string
+        description: >-
+    description: Error interno del servidor.
+    schema:
+      $ref: '#/definitions/ErrorResponse'
