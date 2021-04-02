@@ -1,0 +1,13 @@
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\service\AutomovilService.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\service\impl\AutomovilServiceImpl.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\models\dto\ErrorResponse.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\rs\impl\AutomovilRestControllerImpl.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\models\dto\AutomovilDTO.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\service\impl\translator\TranslatorAutomovil.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\rs\AutomovilRestController.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\dao\AutomovilDAO.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\service\dto\AutomovilDTOService.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\models\entity\Automovil.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\service\dto\impl\AutomovilDTOServiceImpl.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\AutomotoresGonzaloApirestApplication.java
+D:\workspace\AutomotoresGonzalo\AutomotoresGonzalo-apirest\src\main\java\com\sysone\automotores\gonzalo\apirest\models\dto\AutomovilPostDTO.java

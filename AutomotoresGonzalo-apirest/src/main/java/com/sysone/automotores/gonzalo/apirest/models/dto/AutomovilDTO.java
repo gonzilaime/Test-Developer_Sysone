@@ -8,7 +8,6 @@ package com.sysone.automotores.gonzalo.apirest.models.dto;
 
 public class AutomovilDTO {
 
-	private Long id;
 	private String modelo;
 	private String techoCorredizo;
 	private String aireAcondicionado;
@@ -19,14 +18,6 @@ public class AutomovilDTO {
 
 	public AutomovilDTO() {
 
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getModelo() {

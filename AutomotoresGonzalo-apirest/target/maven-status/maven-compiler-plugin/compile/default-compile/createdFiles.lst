@@ -1,0 +1,13 @@
+com\sysone\automotores\gonzalo\apirest\service\dto\impl\AutomovilDTOServiceImpl.class
+com\sysone\automotores\gonzalo\apirest\AutomotoresGonzaloApirestApplication.class
+com\sysone\automotores\gonzalo\apirest\models\entity\Automovil.class
+com\sysone\automotores\gonzalo\apirest\service\AutomovilService.class
+com\sysone\automotores\gonzalo\apirest\service\impl\AutomovilServiceImpl.class
+com\sysone\automotores\gonzalo\apirest\models\dto\AutomovilPostDTO.class
+com\sysone\automotores\gonzalo\apirest\service\dto\AutomovilDTOService.class
+com\sysone\automotores\gonzalo\apirest\models\dto\AutomovilDTO.class
+com\sysone\automotores\gonzalo\apirest\models\dto\ErrorResponse.class
+com\sysone\automotores\gonzalo\apirest\service\impl\translator\TranslatorAutomovil.class
+com\sysone\automotores\gonzalo\apirest\rs\AutomovilRestController.class
+com\sysone\automotores\gonzalo\apirest\rs\impl\AutomovilRestControllerImpl.class
+com\sysone\automotores\gonzalo\apirest\dao\AutomovilDAO.class

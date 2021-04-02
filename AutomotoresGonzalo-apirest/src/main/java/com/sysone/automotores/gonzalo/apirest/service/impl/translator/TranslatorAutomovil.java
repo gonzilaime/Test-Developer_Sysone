@@ -12,7 +12,6 @@ public class TranslatorAutomovil {
 	public static AutomovilDTO getAutmovilDTO(Automovil entity) {
 		AutomovilDTO auto = new AutomovilDTO();
 		if (entity != null) {
-			auto.setId(entity.getId());
 			auto.setModelo(entity.getModelo());
 			if (entity.isTechoCorredizo()) {
 				auto.setTechoCorredizo("SI");

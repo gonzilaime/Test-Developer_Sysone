@@ -28,12 +28,15 @@ public class AutomovilDTOServiceImpl implements AutomovilDTOService {
 				&& (automovil.getTechoCorredizo().equals("SI") || automovil.getTechoCorredizo().equals("NO"))
 				&& (automovil.getFrenosAbs().equals("SI") || automovil.getFrenosAbs().equals("NO"))
 				&& (automovil.getAirbag().equals("SI") || automovil.getAirbag().equals("NO"))
-				&& (automovil.getLlantasAlineacion().equals("SI") || automovil.getLlantasAlineacion().equals("NO")) ) {
+				&& (automovil.getLlantasAlineacion().equals("SI") || automovil.getLlantasAlineacion().equals("NO"))
+				&& (automovil.getModelo().equals("sedan") || automovil.getModelo().equals("familiar")
+						|| automovil.getModelo().equals("coupe"))) {
 
 			service.create(TranslatorAutomovil.getAutomovil(automovil));
 		} else {
 			throw new Exception(
-					"Solo se aceptan valores SI/NO para los campos techo corredizo, airbag, freno abs, aire acondicionado, llantas de alineación.");
+					"Solo se aceptan valores SI/NO para los campos techo corredizo, airbag, freno abs, aire acondicionado, llantas de alineación. Los únicos autos disponibles en stock son"
+							+ "sedan, familiar o coupe.");
 		}
 	}
 
@@ -54,12 +57,15 @@ public class AutomovilDTOServiceImpl implements AutomovilDTOService {
 				&& (automovil.getTechoCorredizo().equals("SI") || automovil.getTechoCorredizo().equals("NO"))
 				&& (automovil.getFrenosAbs().equals("SI") || automovil.getFrenosAbs().equals("NO"))
 				&& (automovil.getAirbag().equals("SI") || automovil.getAirbag().equals("NO"))
-				&& (automovil.getLlantasAlineacion().equals("SI") || automovil.getLlantasAlineacion().equals("NO"))) {
+				&& (automovil.getLlantasAlineacion().equals("SI") || automovil.getLlantasAlineacion().equals("NO"))
+				&& (automovil.getModelo().equals("sedan") || automovil.getModelo().equals("familiar")
+						|| automovil.getModelo().equals("coupe"))) {
 
 			service.updateAutomovil(id, TranslatorAutomovil.getAutomovil(automovil));
 		} else {
 			throw new Exception(
-					"Solo se aceptan valores SI/NO para los campos techo corredizo, airbag, freno abs, aire acondicionado, llantas de alineación.");
+					"Solo se aceptan valores SI/NO para los campos techo corredizo, airbag, freno abs, aire acondicionado, llantas de alineación. Los únicos autos disponibles en stock son"
+							+ "sedan, familiar o coupe.");
 		}
 
 	}
